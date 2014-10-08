@@ -13,7 +13,8 @@
 		50DF3BEC19E58A0E00E9A17E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50DF3BEA19E58A0E00E9A17E /* Main.storyboard */; };
 		50DF3BEE19E58A0E00E9A17E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50DF3BED19E58A0E00E9A17E /* Images.xcassets */; };
 		50DF3BF119E58A0E00E9A17E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DF3BEF19E58A0E00E9A17E /* LaunchScreen.xib */; };
-		50DF3BFD19E58A0F00E9A17E /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DF3BFC19E58A0F00E9A17E /* CalculatorTests.m */; };
+		50DF3C0819E58B0500E9A17E /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DF3C0719E58B0500E9A17E /* Calculator.m */; };
+		50DF3C0A19E58E1A00E9A17E /* calculatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DF3C0919E58E1A00E9A17E /* calculatorTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,9 @@
 		50DF3BF019E58A0E00E9A17E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		50DF3BF619E58A0F00E9A17E /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50DF3BFB19E58A0F00E9A17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50DF3BFC19E58A0F00E9A17E /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		50DF3C0619E58B0500E9A17E /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		50DF3C0719E58B0500E9A17E /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		50DF3C0919E58E1A00E9A17E /* calculatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calculatorTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				50DF3BED19E58A0E00E9A17E /* Images.xcassets */,
 				50DF3BEF19E58A0E00E9A17E /* LaunchScreen.xib */,
 				50DF3BE019E58A0E00E9A17E /* Supporting Files */,
+				50DF3C0619E58B0500E9A17E /* Calculator.h */,
+				50DF3C0719E58B0500E9A17E /* Calculator.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -105,8 +110,8 @@
 		50DF3BF919E58A0F00E9A17E /* CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				50DF3BFC19E58A0F00E9A17E /* CalculatorTests.m */,
 				50DF3BFA19E58A0F00E9A17E /* Supporting Files */,
+				50DF3C0919E58E1A00E9A17E /* calculatorTest.m */,
 			);
 			path = CalculatorTests;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50DF3BE919E58A0E00E9A17E /* ViewController.m in Sources */,
+				50DF3C0819E58B0500E9A17E /* Calculator.m in Sources */,
 				50DF3BE619E58A0E00E9A17E /* AppDelegate.m in Sources */,
 				50DF3BE319E58A0E00E9A17E /* main.m in Sources */,
 			);
@@ -229,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50DF3BFD19E58A0F00E9A17E /* CalculatorTests.m in Sources */,
+				50DF3C0A19E58E1A00E9A17E /* calculatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,13 +1,8 @@
-//
-//  calculatorTest.m
-//  Calculator
-//
-//  Created by Albert Villanueva Carreras on 8/10/14.
-//  Copyright (c) 2014 Albert Villanueva Carreras. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Calculator.h"
 
 @interface calculatorTest : XCTestCase
 
@@ -15,26 +10,69 @@
 
 @implementation calculatorTest
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+- (void)testCanCreateCalculator {
+    
+    Calculator *calc = [[Calculator alloc] init];
+    
+    XCTAssertNotNil(calc);
+    
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+- (void)testM1IsZeroInTheBeginning {
+    
+    Calculator *calc = [[Calculator alloc] init];
+    
+    XCTAssertEqual(calc.m1, 0);
+
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testM2IsZeroInTheBeginning {
+    
+    Calculator *calc = [[Calculator alloc] init];
+    
+    XCTAssertEqual(calc.m2, 0);
+    
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testResetMethodPutsCalculatorInInitialState {
+    
+    Calculator *calc = [[Calculator alloc] init];
+    
+    calc.m1 = 48;
+    calc.m2 = 30;
+    
+    [calc reset];
+    
+    XCTAssertEqual(calc.m1, 0);
+    XCTAssertEqual(calc.m2, 0);
+    
 }
+
+- (void)testAddingTheResultOfM1andM2 {
+    
+    Calculator *calc = [[Calculator alloc] initWithM1:3 andM2:4];
+    
+    [calc sum];
+    
+    XCTAssertEqual(calc.result, 7);
+    XCTAssertEqual(calc.m1, 7);
+    XCTAssertEqual(calc.m2, 0);
+    
+}
+
+#warning FOR DOUBTS
+
+- (void)testAddingNegativeNumbersOfM1andM2 {
+    
+    Calculator *calc = [[Calculator alloc] initWithM1:-3 andM2:-7];
+    
+    [calc sum];
+    
+    XCTAssertEqual(calc.result, -10);
+    XCTAssertEqual(calc.m1, -10);
+    XCTAssertEqual(calc.m2, 0);
+    
+}
+
 
 @end
